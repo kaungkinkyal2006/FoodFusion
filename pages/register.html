@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FoodFusion</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">FoodFusion</div>
+        <ul class="nav-links">
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+        </ul>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="register-hero">
+        <h1>Create an Account</h1>
+        <form action="../api/register.php" method="POST" class="register-form">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>FoodFusion</h2>
+            <p>Explore, share, and enjoy recipes from around the world. Join our community and make cooking fun!</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@foodfusion.com</p>
+            <p>Phone: +95 123 456 789</p>
+            <div class="social-icons">
+                <a href="#"><img src="../images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="../images/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="../images/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 FoodFusion. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Toggle mobile menu
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        burger.classList.toggle('toggle');
+    });
+</script>
+</body>
+</html>
